@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* 1. [attribute] -> any element with title attribute */
+p[title] {
+  color: red;
+  font-weight: bold;
+}
+
+/* 2. [attribute=value] -> exact match */
+a[target="_blank"] {
+  background: yellow;
+}
+
+/* 3. [attribute~=value] -> one word in a space-separated list */
+p[title~="flower"] {
+  color: green;
+}
+
+/* 4. [attribute|=value] -> exact value or starts with value- */
+p[lang|="en"] {
+  color: blue;
+  font-style: italic;
+}
+
+/* 5. [attribute^=value] -> starts with */
+a[href^="https"] {
+  border: 2px dotted purple;
+
+}
+
+/* 6. [attribute$=value] -> ends with */
+a[href$="pdf"] {
+  color: orange;
+  text-decoration: underline;
+}
+
+/* 7. [attribute*=value] -> contains substring */
+a[href*="w3schools"] {
+  background: lightgray;
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Attribute Selector Demo</h2>
+
+<!-- 1. [attribute] -->
+<p title="info">This paragraph has a target attribute.</p>
+
+<!-- 2. [attribute=value] -->
+<a href="" target="_blank">Opens in new tab</a><br><br>
+
+<!-- 3. [attribute~=value] -->
+<p title="big red flower">This paragraph has title with the word flower.</p>
+
+<!-- 4. [attribute|=value] -->
+<p lang="en">English text (lang="en")</p>
+<p lang="en-US">US English text (lang="en-US")</p>
+
+<!-- 5. [attribute^=value] -->
+<a href="https://google.com">Google (starts with https)</a><br>
+<a href="https://example.com">Example (starts with http)</a><br><br>
+
+<!-- 6. [attribute$=value] -->
+<a href="document.pdf">Download PDF (ends with .pdf)</a><br><br>
+
+<!-- 7. [attribute*=value] -->
+<a href="https://w3schools.com">Visit W3Schools (contains w3schools)</a>
+
+</body>
+</html>

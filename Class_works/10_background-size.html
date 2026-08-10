@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background-size Demo</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 350px;
+        border: 2px solid black;
+        background-image: url("butterfly_3.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .auto {
+        background-size: auto;
+      }
+      .contain {
+        background-size: contain;
+      }
+      .cover {
+        background-size: cover;
+      }
+      .label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>background-size: auto vs contain vs cover</h2>
+
+    <div class="label">auto</div>
+    <div class="box auto"></div>
+
+    <div class="label">contain</div>
+    <div class="box contain"></div>
+
+    <div class="label">cover</div>
+    <div class="box cover"></div>
+  </body>
+</html>

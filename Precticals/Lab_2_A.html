@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Registration Form</title>
+    </head>
+    <body>
+        <h1>Student Registration Form</h1>
+      <form action = "welcome.html" nonvalidate  method = "get" target = "_blank">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label>Full Name:</label>
+            <input type = "text"  name = "reg_fullname"  required >
+            <br>
+            <br>
+            <label>Email:</label>
+            <input type = "email"  name = "reg_email" required>
+            <br>
+            <br>
+             <label>Password:</label>
+            <input type = "password" required>
+            <br>
+            <br>
+             <label>Phone Number:</label>
+            <input type = "tel" required>
+            <br>
+            <br>
+             <label>Age:</label>
+            <input type = "number" required>
+            <br>
+            <br>
+            <label>Gender:</label>
+            <input type = "Radio" > <label>Male</label>
+            <input type = "Radio" > <label>Female</label>
+            <br>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Preferences & Extras</legend>
+             <label>Uplode Profile Picture:</label>
+            <input type = "file" required>
+            <br>
+            <br>
+             <label>Color:</label>
+            <input type = "color" required>
+            <br>
+            <br>
+             <label>Search for Course:</label>
+            <input type = "search" required>
+            <br>
+            <br>
+             <label>Course Interest Range:</label>
+            <input type = "range" required>
+            <br>
+            <br>
+             <label>Personal Website:</label>
+            <input type = "url" required>
+            <br>
+            <br>
+             <label>Course Type:</label>
+             <select>
+                <optgroup label = "ENGINEERING">
+                 <option>CE</option>
+                <option>EE</option>
+                <option>EE</option>
+                </optgroup>
+                <optgroup label = "MANAGEMENT">
+                 <option>BBA</option>
+                <option>MBA</option>
+                <option>LLB</option>
+                </optgroup>  
+             </select>
+            <br>
+            <br>
+            <label>Preferred Country:</label>
+            <input list = "countries"  required>
+            <datalist id = "countries" required>
+                <option>USA</option>
+                <option>UK</option>
+                <option>India</option>
+                <option>AUS</option>
+                <option>FRANCE</option>
+                <option>IndONESIA</option>
+            </datalist>
+            <br>
+            <br>
+            <label>Agree to Terms:</label>
+            <input type = "checkbox" required><label>I Agree</label>
+            <br>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Date & Time Info</legend>
+            <label>Select Date of Birth:</label>
+            <input type = "date" required>
+            <br>
+            <br>
+
+            
+            <label>Select Time:</label>
+            <input type = "time" required>
+            <br>
+            <br>
+
+            <label>Select Month:</label>
+            <input type = "month" required>
+            <br>
+            <br>
+
+            <label>Select Week:</label>
+            <input type = "week" required>
+            <br>
+            <br>
+
+            <label>Date & Time:</label>
+            <input type = "datetime-local" required>
+            <br>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>Form Control</legend>
+            <button type = "button">Click Me</button>
+            <br>
+            <br>
+            <input type = "image" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyvVSXsRH0ZEc22vRDXwKEWVAJ_H2C9glGe8fcEep1tw&s=10" alt = "MU Logo for Registration" width = "50" height = "50">
+            <br>
+            <br>
+
+            <input type = "submit" value = "Register Now">
+            <br><br>
+
+            <input type = "reset" value = "Reset Data">
+            <br><br>
+        </fieldset>
+      </form>
+    </body>
+</html>

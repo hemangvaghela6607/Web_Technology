@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    
+</head>
+<body>
+
+    <h1>Employee Registration Form</h1>
+    <form action = "welcome.html" nonvalidate  method = "get" target = "_blank">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="empname">Employee Name:</label>
+            <input type="text" id="empname" name="empname" required>
+            <br>
+            <br>
+
+            <label>Employee ID:</label>
+            <input type="text" required>
+            <br>
+            <br>
+
+            <label>Email:</label>
+            <input type="email" required>
+            <br>
+            <br>
+
+            <label>Password:</label>
+            <input type="password" required>
+            <br>
+            <br>
+
+            <label>Phone Number:</label>
+            <input type="tel" required>
+            <br>
+            <br>
+
+            <label>Age:</label>
+            <input type="number" min="18" max="60">
+            <br>
+            <br>
+
+            <label>Gender:</label>
+           <label>Gender:</label>
+            <input type = "Radio" > <label>Male</label>
+            <input type = "Radio" > <label>Female</label>
+            <input type = "Radio" > <label>Other</label>
+            <br>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Job Details</legend>
+
+            <label>Upload Profile Picture:</label>
+            <input type="file" required>
+            <br>
+            <br>
+
+            <label>Favorite Color:</label>
+            <input type="color" required>
+            <br>
+            <br>
+
+            <label>Search Department:</label>
+            <input type="search">
+            <br>
+            <br>
+
+            <label>Experience (Years):</label>
+            <input type="range" min="0" max="30" required>
+            <br>
+            <br>
+
+            <label>Personal Website:</label>
+            <input type="https://www.anime.com/">
+            <br>
+            <br>
+
+            <label>Department:</label>
+            <select>
+                <option value="">Select</option>
+                <option>HR</option>
+                <option>IT</option>
+                <option>Finance</option>
+                <option>Marketing</option>
+                <option>Sales</option>
+                <option>Operations</option>
+            </select>
+            <br>
+            <br>
+
+            <label>Designation:</label>
+            <input type="text" required>
+            <br>
+            <br>
+
+            <label>Preferred Country:</label>
+            <input list = "countries"  required>
+            <datalist id = "countries" required>
+                <option>USA</option>
+                <option>UK</option>
+                <option>India</option>
+                <option>AUS</option>
+                <option>FRANCE</option>
+                <option>IndOnesia</option>
+                <option>Russia</option>
+                <option>Japan</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Germeny</option>
+                <option>Nepal</option>
+            </datalist>
+            <br>
+            <br>
+
+            <label>Agree to Company Terms:</label>
+            <input type="checkbox" required>
+            <label>I Agree</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Date & Time Info</legend>
+
+            <label>Date of Birth:</label>
+            <input type="date" required>
+            <br>
+            <br>
+
+            <label>Joining Time:</label>
+            <input type="time" required>
+            <br>
+            <br>
+
+            <label>Joining Month:</label>
+            <input type="month" required>
+            <br>
+            <br>
+
+            <label>Joining Week:</label>
+            <input type="week" required>
+            <br>
+            <br>
+
+            <label>Joining Date & Time:</label>
+            <input type="datetime-local" required>
+
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Form Control</b></legend>
+
+            <input type="button" value="Click Me"><br><br>
+
+            <input type="reset" value="Reset"><br><br>
+
+            <input type="submit" value="Register Now"><br><br>
+            
+        </fieldset>
+
+    </form>
+
+</body>
+</html>

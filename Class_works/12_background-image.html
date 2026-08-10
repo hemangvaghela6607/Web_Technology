@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 200px;
+        border: 1px solid black;
+      }
+      .bg-url {
+        background-image: url("rain.gif");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .bg-none
+      {
+        background-image: none;
+        background-color: bisque;
+      }
+       .bg-initial
+      {
+        background-image: initial;
+        background-color: rgb(212, 128, 25);
+      }
+      .parent
+      {
+        height: 200px;
+        width: 400px;
+        border: 2px solid red;
+        padding:20px;
+        background-image: url("rain.gif");
+      }
+      .child
+      {
+        margin-left:50px;
+        margin-top:50px;
+        background-image: inherit;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>1. background-image: url()</h2>
+    <div class="box bg-url"></div>
+
+    <h2>2. background-image: none</h2>
+    <div class="box bg-none"></div>
+
+    <h2>3. background-image: initial</h2>
+    <div class="box bg-initial"></div>
+
+    <h2>4. background-image: inherit</h2>
+    <div class="box parent">
+      Parent (has background image)
+
+      <div class="box child">Child (inherits background)</div>
+    </div>
+  </body>
+</html>

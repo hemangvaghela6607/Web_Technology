@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      height: 60px;
+      width: 60px;
+      border: 2px solid black;
+      margin:15px;
+    }
+    .translate{
+      transform: translate(100px,200px);
+    }
+    .scale{
+      transform: scale(1,1);
+    }
+    .rotate{
+      transform: rotateZ(-50deg);
+    }
+    .skewX
+    {
+      transform: skewX(-20deg);
+    }
+    .skewY
+    {
+      transform: skewY(20deg);
+    }
+    
+    .matrix{
+      transform: matrix(1,2,1,1,5,5);
+    }
+    
+  </style>
+  
+</head>
+<body>
+  <div class="translate">translate</div>
+  <div class="scale">Scale</div>
+  <div class="rotate">rotate</div>
+  <div class="skewX">skewX</div>
+  <div class="skewY">skewY</div>
+  <div class="matrix">matrix</div>
+
+</body>
+</html>

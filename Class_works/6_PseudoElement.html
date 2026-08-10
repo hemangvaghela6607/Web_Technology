@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+      /* ::before -> Inserts content before the element */
+    p::before {
+      content: "Tip: ";
+      /* Adds "Tip: " before paragraph */
+      color: orange; 
+      font-weight: bold;
+    }
+
+    /* ::after -> Inserts content after the element */
+    p::after {
+      content: " (Read more...)";
+      /* Adds  (Read more...) after each <p> */
+      color: gray;
+    }
+
+
+    /* ::first-letter → Styles the very first letter of the element */
+    p::first-letter {
+      font-size: 2em;
+      color: red;
+      font-weight: bold;
+    }
+
+    /* ::first-line → Styles only the first line of the element */
+    p::first-line {
+      font-weight: bold;
+      color: white;
+      background: darkblue;
+      word-spacing: 8px;
+      letter-spacing: 10px;
+      text-decoration: underline;
+      text-transform: uppercase;  
+      line-height: 1.5;
+      
+    }
+
+    /* ::marker → Styles list markers (bullets/numbers) */
+    ul li::marker {
+      color: green;
+      font-size: 1.5em;
+    }
+
+    /* ::selection → Styles the highlighted (selected) text */
+    p::selection {
+      background: yellow;
+      color: black;
+    }
+
+    ul li{
+      color:aqua;
+    }
+
+    /* Base paragraph styling */
+    p {
+     
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p>
+    CSS pseudo-elements let you style specific parts of an element's content.
+    They are useful for advanced designs without adding extra HTML tags.
+  </p>
+
+  <ul>
+    <li>First item</li>
+    <li>Second item</li>
+  </ul>
+
+</body>
+
+</html>
