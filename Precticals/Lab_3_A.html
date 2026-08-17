@@ -9,14 +9,12 @@
         * {
             box-sizing: border-box;
         }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #eef2ff, #f8fafc);
             color: #1e293b;
         }
-
         /* Header */
         .header {
             background: linear-gradient(135deg, #4f46e5, #7c3aed);
@@ -25,12 +23,10 @@
             text-align: center;
             box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
         }
-
         .header h1 {
             margin: 0;
             font-size: 32px;
         }
-
         /* Navbar */
         .navbar {
             background: #ffffff;
@@ -38,7 +34,6 @@
             text-align: center;
             box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
         }
-
         .navbar a {
             color: #475569;
             text-decoration: none;
@@ -46,17 +41,14 @@
             font-weight: bold;
             transition: 0.3s;
         }
-
         .navbar a:hover {
             color: #6366f1;
         }
-
         /* Main Container */
         .container {
             width: 90%;
             margin: 30px auto;
         }
-
         /* Cards */
         .card {
             width: 20%;
@@ -65,86 +57,55 @@
             margin: 10px;
             padding: 20px;
             text-align: center;
-            border-radius: 8px;
-            box-shadow: 0px 0px 6px #aaa;
+            border-radius: 2px;
+            box-shadow:0px 0px 6px #aaa;
         }
-
         .card h2 {
             color: #4a69bd;
             margin: 5px;
         }
-
         .card p {
             color: #555;
             font-weight: bold;
         }
-
         /* Table Container */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 30px;
             background: white;
-            border-radius: 15px;
+            border-radius: 2px;
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
-
         th {
-            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            background: #4a69bd;
             color: white;
             padding: 16px;
             font-size: 16px;
         }
-
         td {
             padding: 15px;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
         }
-
-
-
-        /* Status */
-        td:last-child {
-            font-weight: bold;
-        }
-
-        /* Status colors */
-        tr:nth-child(2) td:last-child,
-        tr:nth-child(3) td:last-child {
-            color: #16a34a;
-        }
-
-        tr:nth-child(4) td:last-child {
-            color: #f59e0b;
-        }
-
-        tr:nth-child(5) td:last-child {
-            color: #6366f1;
-        }
-
         /* Responsive */
         @media (max-width: 900px) {
             .card {
                 width: 45%;
             }
         }
-
         @media (max-width: 600px) {
             .card {
                 width: 90%;
             }
-
             .navbar a {
                 display: block;
                 margin: 12px;
             }
-
             table {
                 font-size: 13px;
             }
-
             th,
             td {
                 padding: 10px 5px;
@@ -152,15 +113,10 @@
         }
     </style>
 </head>
-
 <body>
-
-    <!-- Header -->
     <div class="header">
         <h1>Placement Dashboard</h1>
     </div>
-
-    <!-- Navbar -->
     <div class="navbar">
         <a href="#"> Home</a>
         <a href="#"> Students</a>
@@ -168,74 +124,55 @@
         <a href="#"> Placements</a>
         <a href="#"> Logout</a>
     </div>
-
-    <!-- Main Container -->
     <div class="container">
-
-        <!-- Dashboard Cards -->
-
         <div class="card">
             <h2>250</h2>
             <p>Students</p>
         </div>
-
         <div class="card">
             <h2>40</h2>
             <p>Companies</p>
         </div>
-
         <div class="card">
             <h2>180</h2>
             <p>Students Placed</p>
         </div>
-
         <div class="card">
             <h2>72%</h2>
             <p>Placement Rate</p>
         </div>
-
-        <!-- Placement Table -->
-
         <table>
-
             <tr>
                 <th>Company</th>
                 <th>Package</th>
                 <th>Students Selected</th>
                 <th>Status</th>
             </tr>
-
             <tr>
                 <td>TCS</td>
                 <td>₹4 LPA</td>
                 <td>50</td>
                 <td>Completed</td>
             </tr>
-
             <tr>
                 <td>Infosys</td>
                 <td>₹5 LPA</td>
                 <td>35</td>
                 <td>Completed</td>
             </tr>
-
             <tr>
                 <td>Wipro</td>
                 <td>₹4.5 LPA</td>
                 <td>28</td>
                 <td>Ongoing</td>
             </tr>
-
             <tr>
                 <td>Microsoft</td>
                 <td>₹6 LPA</td>
                 <td>40</td>
                 <td>Upcoming</td>
             </tr>
-
         </table>
-
     </div>
-
 </body>
 </html>
