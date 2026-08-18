@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bouncing Loader</title>
     <style>
+        .h1{
+            text-align: center;
+        }
+        /* Bouncing Loader */
         .loader {
             display: flex;
             justify-content: center;
@@ -38,13 +42,72 @@
                 transform: translateY(-40px);
             }
         }
+
+        /* Photo Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Flex Container and Flex Child */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 300px;
+            background-color: lightgray;
+        }
+        
+        .box {
+            flex: 1;
+            margin: 10px;
+            padding: 30px;
+            text-align: center;
+            background-color: steelblue;
+            color: white;
+        }
+
+        .box2 {
+            flex: 2;
+        }
     </style>
 </head>
 <body>
+    <h1 class="h1">1. Bouncing Loader</h1>
     <div class="loader">
         <div class="ball"></div>
         <div class="ball"></div>
         <div class="ball"></div>
+    </div>
+
+    <h1 class="h1">2. Photo Gallery</h1>
+
+    <div class="gallery">
+        <img src="D:\MU_SEM_3\WT\WT\images\collage.jpg">
+        <img src="D:\MU_SEM_3\WT\WT\images\College_Seminar.jpg">
+        <img src="D:\MU_SEM_3\WT\WT\images\images.jpg">
+        <img src="D:\MU_SEM_3\WT\WT\images\Student_Event.jpg">
+        <img src="https://picsum.photos/200/150?5">
+        <img src="https://picsum.photos/200/150?6">
+        <img src="https://picsum.photos/200/150?7">
+        <img src="https://picsum.photos/200/150?8">
+    </div>
+
+    <h1 class="h1">3. Flex Container and Flex Child</h1>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box">Box 3</div>
     </div>
 </body>
 </html>
