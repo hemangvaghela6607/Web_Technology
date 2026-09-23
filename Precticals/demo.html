@@ -1,515 +1,215 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Student Dashboard</title>
 
     <!-- Bootstrap CSS -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <style>
-
-        body {
-            background-color: #f5f7fb;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Sidebar */
-
-        .sidebar {
-            width: 250px;
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            background: #212529;
-            color: white;
-            padding: 20px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-
-        .logo i {
-            color: #0d6efd;
-        }
-
-        .sidebar a {
-            display: block;
-            color: #adb5bd;
-            text-decoration: none;
-            padding: 12px;
-            margin-bottom: 7px;
-            border-radius: 8px;
-        }
-
-        .sidebar a:hover,
-        .sidebar a.active {
-            background: #0d6efd;
-            color: white;
-        }
-
-        .sidebar i {
-            margin-right: 10px;
-        }
-
-
-        /* Main */
-
-        .main {
-            margin-left: 250px;
-            padding: 25px;
-        }
-
-
-        /* Topbar */
-
-        .topbar {
-            background: white;
-            padding: 15px 20px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-
-        /* Cards */
-
-        .stat-card {
-            background: white;
-            border-radius: 15px;
-            padding: 22px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-            transition: 0.3s;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-icon {
-            width: 55px;
-            height: 55px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-        }
-
-        .blue {
-            background: #e7f1ff;
-            color: #0d6efd;
-        }
-
-        .green {
-            background: #e8f8ef;
-            color: #198754;
-        }
-
-        .yellow {
-            background: #fff4d6;
-            color: #ffc107;
-        }
-
-        .red {
-            background: #ffe7e7;
-            color: #dc3545;
-        }
-
-
-        /* Dashboard Box */
-
-        .dashboard-box {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-            margin-bottom: 25px;
-        }
-
-
-        /* Accordion */
-
-        .accordion-button {
-            font-weight: 600;
-        }
-
-        .accordion-button:not(.collapsed) {
-            background-color: #e7f1ff;
-            color: #0d6efd;
-        }
-
-
-        /* Profile */
-
-        .profile-img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-        }
-
-
-        /* Responsive */
-
-        @media (max-width: 768px) {
-
-            .sidebar {
-                width: 70px;
-                padding: 15px 10px;
-            }
-
-            .sidebar .logo span,
-            .sidebar a span {
-                display: none;
-            }
-
-            .sidebar a {
-                text-align: center;
-            }
-
-            .sidebar i {
-                margin: 0;
-                font-size: 20px;
-            }
-
-            .main {
-                margin-left: 70px;
-            }
-
-        }
-
-    </style>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
 </head>
 
+<body class="bg-light">
 
-<body>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Student Dashboard</a>
 
+        <button class="navbar-toggler" data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<!-- ================= SIDEBAR ================= -->
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
 
-<div class="sidebar">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Subjects</a>
+                </li>
 
-    <div class="logo">
-
-        <i class="bi bi-grid-fill"></i>
-
-        <span>MyDashboard</span>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Result</a>
+                </li>
+            </ul>
+        </div>
     </div>
-
-
-    <a href="#" class="active">
-
-        <i class="bi bi-house"></i>
-
-        <span>Dashboard</span>
-
-    </a>
-
-
-    <a href="#">
-
-        <i class="bi bi-people"></i>
-
-        <span>Students</span>
-
-    </a>
-
-
-    <a href="#">
-
-        <i class="bi bi-book"></i>
-
-        <span>Courses</span>
-
-    </a>
-
-
-    <a href="#">
-
-        <i class="bi bi-bar-chart"></i>
-
-        <span>Reports</span>
-
-    </a>
-
-
-    <a href="#">
-
-        <i class="bi bi-envelope"></i>
-
-        <span>Messages</span>
-
-    </a>
-
-
-    <a href="#">
-
-        <i class="bi bi-gear"></i>
-
-        <span>Settings</span>
-
-    </a>
-
-
-    <hr>
-
-
-    <a href="#">
-
-        <i class="bi bi-box-arrow-right"></i>
-
-        <span>Logout</span>
-
-    </a>
-
-</div>
-
+</nav>
 
 
 <!-- ================= MAIN ================= -->
+<div class="container my-4">
 
-<div class="main">
+    <!-- ALERT -->
+    <div class="alert alert-success">
+        <strong>Welcome!</strong> Your semester exam starts next month.
+    </div>
 
 
-    <!-- TOPBAR -->
+    <!-- STUDENT INFO -->
+    <div class="card mb-4 shadow-sm">
 
-    <div class="topbar d-flex justify-content-between align-items-center">
+        <div class="card-header bg-dark text-white">
+            Student Information
+        </div>
 
-        <div>
-
-            <h4 class="mb-1">
-
-                Good Morning, Hemang 👋
-
+        <div class="card-body">
+            <h4>
+                Hemang Vaghela
+                <span class="badge bg-success">Active</span>
             </h4>
 
-            <small class="text-muted">
-
-                Welcome back to your dashboard
-
-            </small>
-
+            <p class="mb-1">Computer Engineering</p>
+            <p class="mb-1">Semester: 3</p>
+            <p>Enrollment No: MU2026CE101</p>
         </div>
 
-
-        <div class="d-flex align-items-center gap-3">
-
-            <button class="btn btn-light position-relative">
-
-                <i class="bi bi-bell fs-5"></i>
-
-                <span
-                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-
-                    3
-
-                </span>
-
-            </button>
+    </div>
 
 
-            <img
-                src="https://i.pravatar.cc/100?img=12"
-                class="profile-img">
+    <!-- ================= CARDS ================= -->
+    <div class="row g-3">
+
+        <div class="col-md-3 col-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="text-success">85%</h3>
+                    <p>Attendance</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="text-primary">6</h3>
+                    <p>Subjects</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="text-warning">3</h3>
+                    <p>Assignments</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-6">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="text-danger">8.2</h3>
+                    <p>CGPA</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ================= PROGRESS BAR ================= -->
+    <div class="card mt-4">
+
+        <div class="card-header">
+            Attendance Progress
+        </div>
+
+        <div class="card-body">
+
+            <p class="mb-1">Web Technology</p>
+            <div class="progress mb-3">
+                <div class="progress-bar bg-success" style="width:90%">
+                    90%
+                </div>
+            </div>
+
+            <p class="mb-1">Data Structures</p>
+            <div class="progress mb-3">
+                <div class="progress-bar" style="width:85%">
+                    85%
+                </div>
+            </div>
+
+            <p class="mb-1">Database Management</p>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width:75%">
+                    75%
+                </div>
+            </div>
 
         </div>
 
     </div>
 
 
+    <!-- ================= TABLE ================= -->
+    <div class="card mt-4">
 
-    <!-- ================= STATISTICS ================= -->
-
-    <div class="row g-4 mb-4">
-
-
-        <div class="col-lg-3 col-md-6">
-
-            <div class="stat-card">
-
-                <div class="d-flex justify-content-between">
-
-                    <div>
-
-                        <p class="text-muted mb-1">
-
-                            Total Students
-
-                        </p>
-
-                        <h2 class="fw-bold">
-
-                            1,250
-
-                        </h2>
-
-                        <small class="text-success">
-
-                            <i class="bi bi-arrow-up"></i>
-                            12% this month
-
-                        </small>
-
-                    </div>
-
-
-                    <div class="stat-icon blue">
-
-                        <i class="bi bi-people"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="card-header bg-primary text-white">
+            My Subjects
         </div>
 
-
-
-        <div class="col-lg-3 col-md-6">
-
-            <div class="stat-card">
-
-                <div class="d-flex justify-content-between">
-
-                    <div>
-
-                        <p class="text-muted mb-1">
-
-                            Courses
-
-                        </p>
-
-                        <h2 class="fw-bold">
-
-                            48
-
-                        </h2>
-
-                        <small class="text-success">
-
-                            <i class="bi bi-arrow-up"></i>
-                            8% this month
-
-                        </small>
-
-                    </div>
-
-
-                    <div class="stat-icon green">
-
-                        <i class="bi bi-book"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="col-lg-3 col-md-6">
-
-            <div class="stat-card">
-
-                <div class="d-flex justify-content-between">
-
-                    <div>
-
-                        <p class="text-muted mb-1">
-
-                            Assignments
-
-                        </p>
-
-                        <h2 class="fw-bold">
-
-                            320
-
-                        </h2>
-
-                        <small class="text-warning">
-
-                            <i class="bi bi-clock"></i>
-                            24 pending
-
-                        </small>
-
-                    </div>
-
-
-                    <div class="stat-icon yellow">
-
-                        <i class="bi bi-file-earmark-text"></i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="col-lg-3 col-md-6">
-
-            <div class="stat-card">
-
-                <div class="d-flex justify-content-between">
-
-                    <div>
-
-                        <p class="text-muted mb-1">
-
-                            Attendance
-
-                        </p>
-
-                        <h2 class="fw-bold">
-
-                            92%
-
-                        </h2>
-
-                        <small class="text-danger">
-
-                            <i class="bi bi-arrow-down"></i>
-                            2% this month
-
-                        </small>
-
-                    </div>
-
-
-                    <div class="stat-icon red">
-
-                        <i class="bi bi-calendar-check"></i>
-
-                    </div>
-
-                </div>
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-hover">
+
+                    <thead class="table-light">
+                        <tr>
+                            <th>Subject</th>
+                            <th>Faculty</th>
+                            <th>Attendance</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Web Technology</td>
+                            <td>Prof. Patel</td>
+                            <td>90%</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Data Structures</td>
+                            <td>Prof. Shah</td>
+                            <td>85%</td>
+                            <td>
+                                <span class="badge bg-success">
+                                    Good
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Database Management</td>
+                            <td>Prof. Mehta</td>
+                            <td>75%</td>
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    Average
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
 
             </div>
 
@@ -518,863 +218,201 @@
     </div>
 
 
+    <!-- ================= ACCORDION ================= -->
+    <div class="card mt-4">
 
-    <!-- ================= CONTENT ================= -->
+        <div class="card-header">
+            Course Information
+        </div>
 
-    <div class="row">
+        <div class="card-body">
+
+            <div class="accordion" id="courseAccordion">
+
+                <div class="accordion-item">
+
+                    <h2 class="accordion-header">
+                        <button class="accordion-button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#semester">
+                            Semester Subjects
+                        </button>
+                    </h2>
+
+                    <div id="semester"
+                         class="accordion-collapse collapse show"
+                         data-bs-parent="#courseAccordion">
+
+                        <div class="accordion-body">
+                            Web Technology, Data Structures,
+                            DBMS, Java, Mathematics and Software Engineering.
+                        </div>
+
+                    </div>
+
+                </div>
 
 
-        <!-- LEFT -->
+                <div class="accordion-item">
 
-        <div class="col-lg-8">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#exam">
+                            Exam Information
+                        </button>
+                    </h2>
+
+                    <div id="exam"
+                         class="accordion-collapse collapse"
+                         data-bs-parent="#courseAccordion">
+
+                        <div class="accordion-body">
+                            Semester examination will start from
+                            October 2026.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
-            <!-- STUDENT TABLE -->
+    <!-- ================= LIST GROUP ================= -->
+    <div class="card mt-4">
 
-            <div class="dashboard-box">
+        <div class="card-header bg-dark text-white">
+            Upcoming Tasks
+        </div>
 
-                <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="list-group list-group-flush">
 
-                    <h5 class="fw-bold">
+            <div class="list-group-item d-flex justify-content-between">
+                Web Technology Assignment
+                <span class="badge bg-danger">Due Soon</span>
+            </div>
 
-                        Recent Students
+            <div class="list-group-item d-flex justify-content-between">
+                DBMS Practical
+                <span class="badge bg-warning text-dark">Pending</span>
+            </div>
 
-                    </h5>
+            <div class="list-group-item d-flex justify-content-between">
+                Java Project
+                <span class="badge bg-success">Completed</span>
+            </div>
 
-                    <button class="btn btn-primary btn-sm">
+        </div>
 
-                        View All
+    </div>
 
+
+    <!-- ================= BUTTONS + MODAL ================= -->
+    <div class="text-center mt-4">
+
+        <button class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#resultModal">
+            View Result
+        </button>
+
+        <button class="btn btn-success">
+            Download Result
+        </button>
+
+    </div>
+
+
+    <!-- MODAL -->
+    <div class="modal fade" id="resultModal">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Student Result</h5>
+
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <h4 class="text-center text-success">
+                        CGPA: 8.2
+                    </h4>
+
+                    <p class="text-center">
+                        Congratulations! You passed the semester.
+                    </p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                        Close
                     </button>
 
                 </div>
 
-
-                <div class="table-responsive">
-
-                    <table class="table align-middle">
-
-                        <thead>
-
-                            <tr>
-
-                                <th>Student</th>
-
-                                <th>Course</th>
-
-                                <th>Status</th>
-
-                                <th>Action</th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody>
-
-
-                            <tr>
-
-                                <td>
-
-                                    <div class="d-flex align-items-center gap-2">
-
-                                        <img
-                                            src="https://i.pravatar.cc/50?img=1"
-                                            class="rounded-circle"
-                                            width="40">
-
-                                        <div>
-
-                                            <b>Rahul Patel</b>
-
-                                            <br>
-
-                                            <small class="text-muted">
-
-                                                rahul@gmail.com
-
-                                            </small>
-
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-                                <td>Computer Engineering</td>
-
-                                <td>
-
-                                    <span class="badge bg-success">
-
-                                        Active
-
-                                    </span>
-
-                                </td>
-
-                                <td>
-
-                                    <button class="btn btn-sm btn-outline-primary">
-
-                                        View
-
-                                    </button>
-
-                                </td>
-
-                            </tr>
-
-
-
-                            <tr>
-
-                                <td>
-
-                                    <div class="d-flex align-items-center gap-2">
-
-                                        <img
-                                            src="https://i.pravatar.cc/50?img=2"
-                                            class="rounded-circle"
-                                            width="40">
-
-                                        <div>
-
-                                            <b>Jinal Shah</b>
-
-                                            <br>
-
-                                            <small class="text-muted">
-
-                                                jinal@gmail.com
-
-                                            </small>
-
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-                                <td>Information Technology</td>
-
-                                <td>
-
-                                    <span class="badge bg-success">
-
-                                        Active
-
-                                    </span>
-
-                                </td>
-
-                                <td>
-
-                                    <button class="btn btn-sm btn-outline-primary">
-
-                                        View
-
-                                    </button>
-
-                                </td>
-
-                            </tr>
-
-
-
-                            <tr>
-
-                                <td>
-
-                                    <div class="d-flex align-items-center gap-2">
-
-                                        <img
-                                            src="https://i.pravatar.cc/50?img=3"
-                                            class="rounded-circle"
-                                            width="40">
-
-                                        <div>
-
-                                            <b>Amit Joshi</b>
-
-                                            <br>
-
-                                            <small class="text-muted">
-
-                                                amit@gmail.com
-
-                                            </small>
-
-                                        </div>
-
-                                    </div>
-
-                                </td>
-
-                                <td>Mechanical Engineering</td>
-
-                                <td>
-
-                                    <span class="badge bg-warning">
-
-                                        Pending
-
-                                    </span>
-
-                                </td>
-
-                                <td>
-
-                                    <button class="btn btn-sm btn-outline-primary">
-
-                                        View
-
-                                    </button>
-
-                                </td>
-
-                            </tr>
-
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
             </div>
-
-
-
-            <!-- ACCORDION -->
-
-            <div class="dashboard-box">
-
-                <h5 class="fw-bold mb-3">
-
-                    Bootstrap Components
-
-                </h5>
-
-
-                <div class="accordion" id="componentAccordion">
-
-
-                    <!-- CARD -->
-
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header">
-
-                            <button
-                                class="accordion-button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#cardComponent">
-
-                                <i class="bi bi-credit-card me-2"></i>
-
-                                Cards
-
-                            </button>
-
-                        </h2>
-
-
-                        <div
-                            id="cardComponent"
-                            class="accordion-collapse collapse show"
-                            data-bs-parent="#componentAccordion">
-
-                            <div class="accordion-body">
-
-                                <div class="card">
-
-                                    <div class="card-body">
-
-                                        <h5 class="card-title">
-
-                                            Student Management
-
-                                        </h5>
-
-                                        <p class="card-text">
-
-                                            Manage students, courses and
-                                            assignments from this dashboard.
-
-                                        </p>
-
-                                        <button class="btn btn-primary">
-
-                                            Manage Students
-
-                                        </button>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- BUTTONS -->
-
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header">
-
-                            <button
-                                class="accordion-button collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#buttonComponent">
-
-                                <i class="bi bi-hand-index me-2"></i>
-
-                                Buttons
-
-                            </button>
-
-                        </h2>
-
-
-                        <div
-                            id="buttonComponent"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#componentAccordion">
-
-                            <div class="accordion-body">
-
-                                <button class="btn btn-primary me-2">
-
-                                    Primary
-
-                                </button>
-
-                                <button class="btn btn-success me-2">
-
-                                    Success
-
-                                </button>
-
-                                <button class="btn btn-danger me-2">
-
-                                    Delete
-
-                                </button>
-
-                                <button class="btn btn-warning">
-
-                                    Warning
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- FORM -->
-
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header">
-
-                            <button
-                                class="accordion-button collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#formComponent">
-
-                                <i class="bi bi-ui-checks me-2"></i>
-
-                                Form
-
-                            </button>
-
-                        </h2>
-
-
-                        <div
-                            id="formComponent"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#componentAccordion">
-
-                            <div class="accordion-body">
-
-                                <form>
-
-                                    <div class="mb-3">
-
-                                        <label class="form-label">
-
-                                            Student Name
-
-                                        </label>
-
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            placeholder="Enter student name">
-
-                                    </div>
-
-
-                                    <div class="mb-3">
-
-                                        <label class="form-label">
-
-                                            Email
-
-                                        </label>
-
-                                        <input
-                                            type="email"
-                                            class="form-control"
-                                            placeholder="Enter email">
-
-                                    </div>
-
-
-                                    <div class="mb-3">
-
-                                        <label class="form-label">
-
-                                            Course
-
-                                        </label>
-
-                                        <select class="form-select">
-
-                                            <option>
-                                                Select Course
-                                            </option>
-
-                                            <option>
-                                                Computer Engineering
-                                            </option>
-
-                                            <option>
-                                                IT Engineering
-                                            </option>
-
-                                            <option>
-                                                Mechanical Engineering
-                                            </option>
-
-                                        </select>
-
-                                    </div>
-
-
-                                    <button class="btn btn-primary">
-
-                                        Add Student
-
-                                    </button>
-
-                                </form>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- ALERT -->
-
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header">
-
-                            <button
-                                class="accordion-button collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#alertComponent">
-
-                                <i class="bi bi-exclamation-triangle me-2"></i>
-
-                                Alerts & Badges
-
-                            </button>
-
-                        </h2>
-
-
-                        <div
-                            id="alertComponent"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#componentAccordion">
-
-                            <div class="accordion-body">
-
-                                <div class="alert alert-success">
-
-                                    Student added successfully!
-
-                                </div>
-
-                                <div class="alert alert-warning">
-
-                                    24 assignments are pending.
-
-                                </div>
-
-                                <span class="badge bg-primary">
-
-                                    New
-
-                                </span>
-
-                                <span class="badge bg-success">
-
-                                    Active
-
-                                </span>
-
-                                <span class="badge bg-danger">
-
-                                    Offline
-
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- PROGRESS -->
-
-                    <div class="accordion-item">
-
-                        <h2 class="accordion-header">
-
-                            <button
-                                class="accordion-button collapsed"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#progressComponent">
-
-                                <i class="bi bi-bar-chart me-2"></i>
-
-                                Progress Bars
-
-                            </button>
-
-                        </h2>
-
-
-                        <div
-                            id="progressComponent"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#componentAccordion">
-
-                            <div class="accordion-body">
-
-                                <p class="mb-1">
-
-                                    HTML
-
-                                </p>
-
-                                <div class="progress mb-3">
-
-                                    <div
-                                        class="progress-bar"
-                                        style="width: 90%">
-
-                                        90%
-
-                                    </div>
-
-                                </div>
-
-
-                                <p class="mb-1">
-
-                                    CSS
-
-                                </p>
-
-                                <div class="progress mb-3">
-
-                                    <div
-                                        class="progress-bar bg-success"
-                                        style="width: 80%">
-
-                                        80%
-
-                                    </div>
-
-                                </div>
-
-
-                                <p class="mb-1">
-
-                                    Bootstrap
-
-                                </p>
-
-                                <div class="progress">
-
-                                    <div
-                                        class="progress-bar bg-warning"
-                                        style="width: 75%">
-
-                                        75%
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- RIGHT -->
-
-        <div class="col-lg-4">
-
-
-            <!-- PROFILE -->
-
-            <div class="dashboard-box text-center">
-
-                <img
-                    src="https://i.pravatar.cc/120?img=12"
-                    class="rounded-circle mb-3"
-                    width="90"
-                    height="90">
-
-                <h5 class="fw-bold">
-
-                    Hemang Vaghela
-
-                </h5>
-
-                <p class="text-muted">
-
-                    Computer Engineering Student
-
-                </p>
-
-                <button class="btn btn-primary">
-
-                    Edit Profile
-
-                </button>
-
-            </div>
-
-
-
-            <!-- COURSE PROGRESS -->
-
-            <div class="dashboard-box">
-
-                <h5 class="fw-bold mb-3">
-
-                    Course Progress
-
-                </h5>
-
-
-                <p class="mb-1">
-
-                    Web Technology
-
-                    <span class="float-end">
-
-                        85%
-
-                    </span>
-
-                </p>
-
-                <div class="progress mb-3">
-
-                    <div
-                        class="progress-bar"
-                        style="width:85%">
-
-                    </div>
-
-                </div>
-
-
-                <p class="mb-1">
-
-                    Java
-
-                    <span class="float-end">
-
-                        70%
-
-                    </span>
-
-                </p>
-
-                <div class="progress mb-3">
-
-                    <div
-                        class="progress-bar bg-success"
-                        style="width:70%">
-
-                    </div>
-
-                </div>
-
-
-                <p class="mb-1">
-
-                    Database
-
-                    <span class="float-end">
-
-                        60%
-
-                    </span>
-
-                </p>
-
-                <div class="progress">
-
-                    <div
-                        class="progress-bar bg-warning"
-                        style="width:60%">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- NOTIFICATIONS -->
-
-            <div class="dashboard-box">
-
-                <h5 class="fw-bold mb-3">
-
-                    Notifications
-
-                </h5>
-
-
-                <div class="d-flex gap-3 mb-3">
-
-                    <i class="bi bi-bell text-primary fs-4"></i>
-
-                    <div>
-
-                        <b>New Assignment</b>
-
-                        <br>
-
-                        <small class="text-muted">
-
-                            Web Technology assignment added.
-
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="d-flex gap-3 mb-3">
-
-                    <i class="bi bi-calendar text-success fs-4"></i>
-
-                    <div>
-
-                        <b>Exam Schedule</b>
-
-                        <br>
-
-                        <small class="text-muted">
-
-                            Your exam schedule is available.
-
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="d-flex gap-3">
-
-                    <i class="bi bi-chat text-warning fs-4"></i>
-
-                    <div>
-
-                        <b>New Message</b>
-
-                        <br>
-
-                        <small class="text-muted">
-
-                            You received a new message.
-
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
 
         </div>
 
     </div>
 
 
-    <!-- FOOTER -->
+    <!-- ================= PAGINATION ================= -->
+    <nav class="mt-4">
 
-    <div class="text-center text-muted mt-4">
+        <ul class="pagination justify-content-center">
 
-        © 2026 MyDashboard | Bootstrap Dashboard
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
 
-    </div>
+            <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+            </li>
 
+            <li class="page-item">
+                <a class="page-link" href="#">2</a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" href="#">3</a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 </div>
 
 
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center p-3">
+    © 2026 Student Dashboard
+</footer>
+
 
 <!-- Bootstrap JS -->
-
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
+```
