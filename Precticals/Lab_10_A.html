@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Page</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Navbar -->
+  <header class="border-b border-gray-200 bg-white">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+
+      <a href="#" class="text-2xl font-bold tracking-tight">
+        NOVA
+      </a>
+
+      <nav class="hidden items-center gap-8 md:flex">
+        <a href="#" class="text-sm font-medium text-gray-700 hover:text-black">Shop</a>
+        <a href="#" class="text-sm font-medium text-gray-700 hover:text-black">Collections</a>
+        <a href="#" class="text-sm font-medium text-gray-700 hover:text-black">About</a>
+        <a href="#" class="text-sm font-medium text-gray-700 hover:text-black">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button class="hidden text-gray-700 hover:text-black sm:block" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               fill="none" viewBox="0 0 24 24"
+               stroke-width="1.8" stroke="currentColor"
+               class="h-5 w-5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m21 21-4.35-4.35m1.35-5.4a6.75 6.75 0 1 1-13.5 0 6.75 6.75 0 0 1 13.5 0Z" />
+          </svg>
+        </button>
+
+        <button class="relative text-gray-700 hover:text-black" aria-label="Shopping bag">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               fill="none" viewBox="0 0 24 24"
+               stroke-width="1.8" stroke="currentColor"
+               class="h-5 w-5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M6 8.5h12l1 12H5l1-12Z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 9V6a3 3 0 0 1 6 0v3" />
+          </svg>
+
+          <span class="absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-black text-[10px] text-white">
+            2
+          </span>
+        </button>
+
+        <button class="md:hidden" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               fill="none" viewBox="0 0 24 24"
+               stroke-width="1.8" stroke="currentColor"
+               class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Breadcrumb -->
+  <div class="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
+    <nav class="text-sm text-gray-500">
+      <a href="#" class="hover:text-gray-900">Home</a>
+      <span class="mx-2">/</span>
+      <a href="#" class="hover:text-gray-900">Accessories</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Minimal Watch</span>
+    </nav>
+  </div>
+
+
+  <!-- Product -->
+  <main class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 lg:py-14">
+
+    <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
+
+      <!-- Product Images -->
+      <section>
+        <div class="overflow-hidden rounded-2xl bg-gray-100">
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=85"
+            alt="Minimal black watch"
+            class="h-[420px] w-full object-cover sm:h-[550px] lg:h-[650px]"
+          />
+        </div>
+
+        <div class="mt-4 grid grid-cols-4 gap-3">
+          <button class="overflow-hidden rounded-xl border-2 border-black">
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80"
+              alt="Watch front"
+              class="h-24 w-full object-cover"
+            />
+          </button>
+
+          <button class="overflow-hidden rounded-xl border border-gray-200 hover:border-gray-500">
+            <img
+              src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=300&q=80"
+              alt="Watch detail"
+              class="h-24 w-full object-cover"
+            />
+          </button>
+
+          <button class="overflow-hidden rounded-xl border border-gray-200 hover:border-gray-500">
+            <img
+              src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=300&q=80"
+              alt="Watch side"
+              class="h-24 w-full object-cover"
+            />
+          </button>
+
+          <button class="overflow-hidden rounded-xl border border-gray-200 hover:border-gray-500">
+            <img
+              src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=300&q=80"
+              alt="Watch closeup"
+              class="h-24 w-full object-cover"
+            />
+          </button>
+        </div>
+      </section>
+
+
+      <!-- Product Information -->
+      <section class="flex flex-col">
+
+        <div class="mb-3 flex items-center gap-2">
+          <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gray-700">
+            Bestseller
+          </span>
+
+          <span class="text-sm text-green-600">
+            In stock
+          </span>
+        </div>
+
+        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+          Minimal Watch
+        </h1>
+
+        <p class="mt-3 text-lg text-gray-500">
+          Timeless design. Precision engineering.
+        </p>
+
+        <!-- Rating -->
+        <div class="mt-5 flex items-center gap-3">
+          <div class="flex text-yellow-400">
+            ★★★★★
+          </div>
+          <a href="#reviews" class="text-sm font-medium underline underline-offset-4">
+            128 reviews
+          </a>
+        </div>
+
+        <!-- Price -->
+        <div class="mt-7 flex items-center gap-3">
+          <span class="text-3xl font-bold">$149</span>
+          <span class="text-lg text-gray-400 line-through">$199</span>
+          <span class="rounded bg-black px-2 py-1 text-xs font-bold text-white">
+            25% OFF
+          </span>
+        </div>
+
+        <div class="my-7 border-t border-gray-200"></div>
+
+        <!-- Description -->
+        <p class="leading-7 text-gray-600">
+          A refined everyday timepiece designed for those who appreciate
+          simplicity. Featuring a premium stainless-steel case, scratch-resistant
+          glass, and a comfortable interchangeable strap.
+        </p>
+
+        <!-- Color -->
+        <div class="mt-8">
+          <div class="mb-3 flex justify-between">
+            <span class="text-sm font-semibold">Color</span>
+            <span class="text-sm text-gray-500">Midnight Black</span>
+          </div>
+
+          <div class="flex gap-3">
+            <button
+              aria-label="Black"
+              class="h-9 w-9 rounded-full border-2 border-black bg-gray-950 ring-2 ring-white ring-offset-2 ring-offset-gray-900">
+            </button>
+
+            <button
+              aria-label="Silver"
+              class="h-9 w-9 rounded-full border border-gray-300 bg-gray-300">
+            </button>
+
+            <button
+              aria-label="Gold"
+              class="h-9 w-9 rounded-full border border-yellow-600 bg-yellow-500">
+            </button>
+          </div>
+        </div>
+
+        <!-- Size -->
+        <div class="mt-8">
+          <div class="mb-3 flex items-center justify-between">
+            <span class="text-sm font-semibold">Strap Size</span>
+            <a href="#" class="text-sm underline">Size guide</a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3">
+            <button class="rounded-lg border-2 border-black px-4 py-3 text-sm font-medium">
+              18mm
+            </button>
+
+            <button class="rounded-lg border border-gray-300 px-4 py-3 text-sm font-medium hover:border-black">
+              20mm
+            </button>
+
+            <button class="rounded-lg border border-gray-300 px-4 py-3 text-sm font-medium hover:border-black">
+              22mm
+            </button>
+          </div>
+        </div>
+
+        <!-- Quantity / CTA -->
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+
+          <div class="flex h-14 items-center justify-between rounded-xl border border-gray-300 sm:w-36">
+            <button class="px-4 text-xl text-gray-500 hover:text-black">−</button>
+            <span class="font-medium">1</span>
+            <button class="px-4 text-xl text-gray-500 hover:text-black">+</button>
+          </div>
+
+          <button class="h-14 flex-1 rounded-xl bg-black px-8 font-semibold text-white transition hover:bg-gray-800">
+            Add to Cart
+          </button>
+
+          <button
+            class="flex h-14 w-14 items-center justify-center rounded-xl border border-gray-300 hover:border-black"
+            aria-label="Add to wishlist">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 fill="none" viewBox="0 0 24 24"
+                 stroke-width="1.8" stroke="currentColor"
+                 class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M20.84 8.72c0 5.5-8.84 10.28-8.84 10.28S3.16 14.22 3.16 8.72A4.72 4.72 0 0 1 12 6.18a4.72 4.72 0 0 1 8.84 2.54Z" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Buy Now -->
+        <button class="mt-3 h-14 w-full rounded-xl border-2 border-black font-semibold transition hover:bg-black hover:text-white">
+          Buy it now
+        </button>
+
+        <!-- Benefits -->
+        <div class="mt-8 grid grid-cols-1 gap-4 border-y border-gray-200 py-6 sm:grid-cols-3">
+
+          <div class="flex items-center gap-3">
+            <div class="rounded-full bg-gray-100 p-2">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   fill="none" viewBox="0 0 24 24"
+                   stroke-width="1.8" stroke="currentColor"
+                   class="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3.75 7.5h11.5v9h-11.5zM15.25 10.5h3l2 2.5v3.5h-5zM7 19.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 19.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs font-semibold">Free Shipping</p>
+              <p class="text-xs text-gray-500">Orders over $50</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="rounded-full bg-gray-100 p-2">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   fill="none" viewBox="0 0 24 24"
+                   stroke-width="1.8" stroke="currentColor"
+                   class="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 15 12 18l6-6M20.25 12a8.25 8.25 0 1 1-16.5 0 8.25 8.25 0 0 1 16.5 0Z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs font-semibold">2 Year Warranty</p>
+              <p class="text-xs text-gray-500">Covered by NOVA</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="rounded-full bg-gray-100 p-2">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   fill="none" viewBox="0 0 24 24"
+                   stroke-width="1.8" stroke="currentColor"
+                   class="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M9 14.25 4.75 18.5m0 0 4.25-.25m-4.25.25.25-4.25M15 9.75 19.25 5.5m0 0L15 5.75m4.25-.25L19 9.75" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs font-semibold">Easy Returns</p>
+              <p class="text-xs text-gray-500">30-day returns</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+
+  <!-- Features -->
+  <section class="bg-gray-50">
+    <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-widest text-gray-500">
+          Designed differently
+        </p>
+
+        <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+          Everything you need. Nothing you don't.
+        </h2>
+
+        <p class="mt-4 text-gray-600">
+          Thoughtful materials and considered details come together in one
+          beautifully simple timepiece.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+
+        <div class="rounded-2xl bg-white p-8 shadow-sm">
+          <div class="mb-5 inline-flex rounded-xl bg-gray-100 p-3">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 fill="none" viewBox="0 0 24 24"
+                 stroke-width="1.8" stroke="currentColor"
+                 class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 3v18M5 8h14M5 16h14" />
+            </svg>
+          </div>
+
+          <h3 class="text-lg font-semibold">Premium Materials</h3>
+
+          <p class="mt-2 text-sm leading-6 text-gray-600">
+            Crafted from corrosion-resistant stainless steel with scratch-resistant
+            mineral glass.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white p-8 shadow-sm">
+          <div class="mb-5 inline-flex rounded-xl bg-gray-100 p-3">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 fill="none" viewBox="0 0 24 24"
+                 stroke-width="1.8" stroke="currentColor"
+                 class="h-6 w-6">
+              <circle cx="12" cy="12" r="8.5" />
+              <path stroke-linecap="round" d="M12 7v5l3 2" />
+            </svg>
+          </div>
+
+          <h3 class="text-lg font-semibold">Reliable Movement</h3>
+
+          <p class="mt-2 text-sm leading-6 text-gray-600">
+            Accurate quartz movement keeps your day running precisely on time.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-white p-8 shadow-sm">
+          <div class="mb-5 inline-flex rounded-xl bg-gray-100 p-3">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 fill="none" viewBox="0 0 24 24"
+                 stroke-width="1.8" stroke="currentColor"
+                 class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 3 5 6v5c0 4.6 2.9 8.4 7 10 4.1-1.6 7-5.4 7-10V6l-7-3Z" />
+            </svg>
+          </div>
+
+          <h3 class="text-lg font-semibold">Built to Last</h3>
+
+          <p class="mt-2 text-sm leading-6 text-gray-600">
+            Water resistant up to 50m and backed by a comprehensive 2-year warranty.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Reviews -->
+  <section id="reviews" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+
+    <div class="flex flex-col justify-between gap-5 border-b border-gray-200 pb-8 sm:flex-row sm:items-end">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-widest text-gray-500">
+          Customer reviews
+        </p>
+
+        <h2 class="mt-2 text-3xl font-bold">
+          Loved by thousands
+        </h2>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="text-3xl font-bold">4.9</span>
+
+        <div>
+          <div class="text-yellow-400">★★★★★</div>
+          <p class="text-xs text-gray-500">128 reviews</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid gap-8 pt-10 md:grid-cols-3">
+
+      <article>
+        <div class="text-yellow-400">★★★★★</div>
+        <p class="mt-4 leading-7 text-gray-600">
+          “Beautifully minimal and surprisingly comfortable. It has quickly
+          become my everyday watch.”
+        </p>
+
+        <p class="mt-5 text-sm font-semibold">Alex M.</p>
+        <p class="text-xs text-gray-500">Verified buyer</p>
+      </article>
+
+      <article>
+        <div class="text-yellow-400">★★★★★</div>
+        <p class="mt-4 leading-7 text-gray-600">
+          “The quality is excellent for the price. The design works with
+          literally everything I wear.”
+        </p>
+
+        <p class="mt-5 text-sm font-semibold">Sarah K.</p>
+        <p class="text-xs text-gray-500">Verified buyer</p>
+      </article>
+
+      <article>
+        <div class="text-yellow-400">★★★★★</div>
+        <p class="mt-4 leading-7 text-gray-600">
+          “Fast delivery, beautiful packaging, and the watch looks even better
+          in person.”
+        </p>
+
+        <p class="mt-5 text-sm font-semibold">Daniel R.</p>
+        <p class="text-xs text-gray-500">Verified buyer</p>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 bg-gray-950 text-white">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+
+      <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
+
+        <div>
+          <div class="text-2xl font-bold">NOVA</div>
+          <p class="mt-2 text-sm text-gray-400">
+            Timeless products for modern living.
+          </p>
+        </div>
+
+        <div class="flex gap-6 text-sm text-gray-400">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+          <a href="#" class="hover:text-white">Shipping</a>
+          <a href="#" class="hover:text-white">Support</a>
+        </div>
+
+      </div>
+
+      <div class="mt-8 border-t border-gray-800 pt-6 text-sm text-gray-500">
+        © 2026 NOVA. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
